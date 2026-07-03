@@ -3,19 +3,29 @@ name: My First Workflow
 on:
   workflow_dispatch
 
+
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello Lalit!"
+      - run: python --version
+      - run: node --version
+      - run: git --version
 
-      - name: Print Date
-        run: date
+# jobs:
+#   hello:
+#     runs-on: ubuntu-latest
 
-      - name: Print Current Folder
-        run: pwd
+#     steps:
+#       - name: Say Hello
+#         run: echo "Hello Lalit!"
 
-      - name: Show Files
-        run: ls
+#       - name: Print Date
+#         run: date
+
+#       - name: Print Current Folder
+#         run: pwd
+
+#       - name: Show Files
+#         run: ls
