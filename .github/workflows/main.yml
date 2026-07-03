@@ -1,17 +1,17 @@
-name: My First Workflow
+# name: My First Workflow
 
-on:
-  workflow_dispatch
+# on:
+#   workflow_dispatch
 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - run: python --version
-      - run: node --version
-      - run: git --version
+#     steps:
+#       - run: python --version
+#       - run: node --version
+#       - run: git --version
 
 # jobs:
 #   hello:
@@ -29,3 +29,26 @@ jobs:
 
 #       - name: Show Files
 #         run: ls
+
+
+name: Runner Demo
+
+on:
+  workflow_dispatch
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Operating System
+        run: uname -a
+
+      - name: Show Current User
+        run: whoami
+
+      - name: Show Working Directory
+        run: pwd
+
+      - name: Show Files
+        run: ls
