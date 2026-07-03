@@ -16,3 +16,6 @@ jobs:
 
       - name: Print Current Folder
         run: pwd
+
+      - name: Show Files
+        run: ls
